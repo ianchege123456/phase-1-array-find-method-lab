@@ -1,0 +1,21 @@
+function superbowlWin(record) {
+    const win = record.find(game => game.result === "W");
+    return win ? win.year : undefined;
+  }
+  
+  // Example usage:
+  const recordWithWin = [
+    { year: 1998, result: "L" },
+    { year: 1999, result: "W" },
+    { year: 2000, result: "L" }
+  ];
+  
+  const recordWithoutWin = [
+    { year: 2001, result: "L" },
+    { year: 2002, result: "L" },
+    { year: 2003, result: "L" }
+  ];
+  
+  console.log(superbowlWin(recordWithWin)); // Output: 1999
+  console.log(superbowlWin(recordWithoutWin)); // Output: undefined
+  
